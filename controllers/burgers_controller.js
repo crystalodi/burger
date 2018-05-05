@@ -26,6 +26,7 @@ router.put("/api/burgers/:id", function(req, res){
 })
 
 router.post("/api/burgers", function(req, res){
+  console.log(req)
   var cols = ["burger_name"];
   var values = [req.body.burger_name]
   burger.add(cols, values, function(result){
