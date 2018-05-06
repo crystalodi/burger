@@ -1,6 +1,6 @@
 <div class="col m12">
   <div>
-    <input type="text" value="{{burger_name}}" devoured="{{devoured}}" readonly>
-    {{#if devoured}}devoured{{else}}not devoured{{/if}}
+    <input type="text" value="{{burger_name}}" readonly>
+    {{#if devoured}}{{else}}<button class="btn red devour-burger" data-id="{{id}}">Devour It</button>{{/if}}
   </div>
 </div>
