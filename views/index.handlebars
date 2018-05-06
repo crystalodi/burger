@@ -2,7 +2,11 @@
   <div class="container">
     <div class="row">
       <div class="col m4">
-        
+        {{#each burgers}}
+        {{#unless devoured}}
+            {{> burgers/burger-block devoured=0}}
+        {{/unless}}
+        {{/each}}
       </div>
       <div class="col m4">
         <form class="add-burger">
@@ -15,7 +19,11 @@
         </form>
       </div>
       <div class="col m4">
-        
+        {{#each burgers}}
+        {{#if devoured}}
+            {{> burgers/burger-block devoured=1}}
+        {{/if}}
+        {{/each}}
       </div>
     </div>
   </div>
