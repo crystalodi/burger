@@ -1,6 +1,3 @@
-<div class="col m12">
-  <div>
-    <input type="text" value="{{burger_name}}" readonly>
-    {{#if devoured}}{{else}}<button class="btn red devour-burger" data-id="{{id}}">Devour It</button>{{/if}}
-  </div>
-</div>
+<li class="collection-item">
+  <div>{{burger_name}}{{#if devoured}}{{else}}<a href="#" class="secondary-content devour-burger" data-id="{{id}}"><span class="fas fa-utensils"></span></a></div>{{/if}}
+</li>

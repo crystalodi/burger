@@ -46,25 +46,21 @@ var orm = {
     queryToRun += " ("+ cols.toString() + ") ";
     queryToRun += "values"
     queryToRun += " (" + printQuestionMarks(cols.length) + ")";
-    console.log(queryToRun);
     var query = connection.query(queryToRun, vals, function(err, results){
       if(err) {
         throw err;
       }
       cb(results);
-      console.log(query.sql);
     });
   },
   updateOne: function(table, cols, condition, cb) {
     var queryToRun = "update " + table;
     queryToRun += " set " + objToSql(cols) + " " + condition;
-    console.log(queryToRun);
     var query = connection.query(queryToRun, function(err, results){
       if(err) {
         throw err;
       }
       cb(results)
-      console.log(query.sql);
     });
   }
 };
