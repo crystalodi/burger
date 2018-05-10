@@ -1,47 +1,54 @@
-<section class="section center">
+<section class="section center section-add-burger yellow accent-4">
   <div class="container">
     <div class="row">
       <div class="col m12 s12">
-        <h6>Eat the Burger</h6>
+        <h3>Eat the Burger</h3>
       </div>
       <div class="col m12 s12">
-        <img src="/assets/img/burger.png">
-        <div>Icons made by <a href="https://www.flaticon.com/authors/twitter" title="Twitter">Twitter</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        <img src="/assets/img/burger.png" class="responsive-img">
+      </div>
+      <div class="col m12 s12">
+        <form class="add-burger">
+          <div class="input-field">
+            <textarea placeholder="burger" id="burger-name" class="materialize-textarea" maxlength="255" required></textarea>
+          </div>
+          <div class="input-field">
+            <button class="btn red lighten-1" type="submit"><i class="material-icons left">add_circle</i> Add Burger</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 </section>
-<section class="section center">
+<section class="section center section-all-burgers yellow accent-4">
   <div class="container">
     <div class="row">
-      <div class="col m4 s4">
-        <ul class="collection with-header left-align">
-          <li class="collection-header"><h5>Uneaten Burgers</h5></li>
-          {{#each burgers}}
-          {{#unless devoured}}
-              {{> burgers/burger-block devoured=0}}
-          {{/unless}}
-          {{/each}}
+      <div class="col m6 s6">
+        <ul class="collection with-header left-align uneaten-burgers">
+          <li class="collection-header red lighten-1 white-text"><h5>Uneaten Burgers</h5></li>
+          <li class="collection-item">
+            <div class="row">
+              {{#each burgers}}
+              {{#unless devoured}}
+                  {{> burgers/burger-block devoured=0}}
+              {{/unless}}
+              {{/each}}
+            </div>
+          </li>
         </ul>
       </div>
-      <div class="col m4 s4">
-        <form class="add-burger">
-          <div class="input-field">
-            <textarea placeholder="burger" id="burger-name" class="materialize-textarea burger-input" maxlength="255" required></textarea>
-          </div>
-          <div class="input-field">
-            <button class="btn" type="submit">Add Burger</button>
-          </div>
-        </form>
-      </div>
-      <div class="col m4 s4">
-        <ul class="collection with-header left-align">
-          <li class="collection-header"><h5>Eaten Burgers</h5></li>
-          {{#each burgers}}
-          {{#if devoured}}
-            {{> burgers/burger-block devoured=1}}
-          {{/if}}
-          {{/each}}
+      <div class="col m6 s6">
+        <ul class="collection with-header left-align eaten-burgers">
+          <li class="collection-header red lighten-1 white-text"><h5>Eaten Burgers</h5></li>
+          <li class="collection-item">
+            <div class="row">
+              {{#each burgers}}
+              {{#if devoured}}
+                {{> burgers/burger-block devoured=1}}
+              {{/if}}
+              {{/each}}
+            </div>
+          </li>
         </ul>
       </div>
     </div>

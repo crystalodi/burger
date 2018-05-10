@@ -1,0 +1,15 @@
+.devour-burger:hover {
+  cursor: pointer;
+}
+
+.section-add-burger textarea {
+  padding:5px !important;
+  background-color: white !important;
+  width:50% !important;
+  border: black 3px solid !important;
+}
+
+.section-add-burger textarea:focus {
+  border-bottom:black 3px solid !important;
+  box-shadow: none!important;
+}
