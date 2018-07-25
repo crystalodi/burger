@@ -88,13 +88,19 @@ npm start
 
 Open a web browser and type http://localhost:3000. Your should see this:
 
+<img src="https://raw.githubusercontent.com/crystalodi/burger/master/images/home.png" width="50%" height="100%">
+
 
 ## How to Use
 
 ### Add a burger
 
+
 ### Eat a Burger
 
+<img src="https://raw.githubusercontent.com/crystalodi/burger/master/images/eat_it.png" width="50%" height="100%">
+
+<img src="https://raw.githubusercontent.com/crystalodi/burger/master/images/eaten_burger.png" width="50%" height="100%">
 
 ## Built With
 
