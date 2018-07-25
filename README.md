@@ -112,6 +112,5 @@ Open a web browser and type http://localhost:3000. Your should see this:
 
 ## Acknowledgments
 
-* Stack Overflow
-* w3Schools.com
+* MySQL Documentation
 
