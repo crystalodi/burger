@@ -19,6 +19,8 @@ Node (LTS) - http://nodejs.org
 
 MySQL Workbench - https://dev.mysql.com/downloads/workbench/
 
+GIT - https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
 
 ### Installing
 
