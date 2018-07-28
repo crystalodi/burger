@@ -7,48 +7,6 @@ Go [here](https://lit-hamlet-29799.herokuapp.com/) to view the app.
 
 ## About the Application
 
-### Folder Structure
-
-The app utilizes the MVC (Model-View-Controller) design pattern to organize functionality. After following the steps in the Installation section, your folder should look like this:
-
-```
-burger/
-  config/
-    connection.js
-    orm.js
-  controllers/
-    burgers_controller.js
-  db/
-    schema.sql
-    seeds.sql
-  models/
-    burger.js
-  node_modules/
-  public/
-      assets/
-        css/
-            burger_style.css
-        img/
-            burger.png
-        js/
-            burgers.js
-  views/
-      layouts/
-        main.handlebars
-      partials/
-        burgers/
-            burger-block.handlebars
-    index.handlebars
-  .gitignore
-  package.json
-  README.md
-  server.js
-```
-
-```
-description of files here
-```
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine.
@@ -90,15 +48,45 @@ Open a web browser and type http://localhost:3000. Your should see this:
 
 <img src="https://raw.githubusercontent.com/crystalodi/burger/master/images/home.png" width="50%" height="100%">
 
+### Folder Structure
+
+The app utilizes the MVC (Model-View-Controller) design pattern to organize functionality. After following the steps in the Installation section, your folder should look like this:
+
+```
+├───config
+├───controllers
+├───db
+├───images
+├───models
+├───node_modules
+├───public
+│   └───assets
+│       ├───css
+│       ├───img
+│       └───js
+└───views
+    ├───layouts
+    └───partials
+        └───burgers
+```
+* `/config` contains the logic that connects to the MySQL database and the ORM used to create, read, and update burgers submitted by user. 
+* `/db` contains sql scripts to create schema and populate tables with test data
+* `/models` contains Burger model that passes data to the orm in `/config` (Model)
+* `/controllers` contains api routes for retrieving, adding, and updating burgers (Controller)
+* `/public` contains front end ui used to display the page. (View)
+* `/views` contains express handlebars templates used to render eaten and uneaten burgers. (View)
 
 ## How to Use
 
 ### Add a burger
-
+Enter the type of burger into the burger message area and press the Add Burger Button. The burger should now appear under the Uneaten Burgers section underneath the add burger section.
 
 ### Eat a Burger
+Under the uneaten burgers section below the add burger form, click on the eat it link
 
 <img src="https://raw.githubusercontent.com/crystalodi/burger/master/images/eat_it.png" width="50%" height="100%">
+
+After the burger is eaten, then the burger will appear under the eaten burgers section
 
 <img src="https://raw.githubusercontent.com/crystalodi/burger/master/images/eaten_burger.png" width="50%" height="100%">
 
